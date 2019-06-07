@@ -5,16 +5,19 @@
 
 variable "client_certificate_path" {}
 variable "client_certificate_password" {}
+variable "subscription_id" {}
+variable "client_id" {}
+variable "tenant_id" {}
 
 provider "azurerm" {
 
   version = "=1.28.0"
 
-  subscription_id             = "${var.subscription_id}"
-  client_id                   = "${var.client_id}"
-  client_certificate_path     = "${var.client_certificate_path}"
+  subscription_id = "${var.subscription_id}"
+  client_id = "${var.client_id}"
+  client_certificate_path = "${var.client_certificate_path}"
   client_certificate_password = "${var.client_certificate_password}"
-  tenant_id                   = "${var.tenant_id}"
+  tenant_id = "${var.tenant_id}"
     
 }
 
